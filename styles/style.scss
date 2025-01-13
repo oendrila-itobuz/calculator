@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.calculator-box {
+  background-color: #1A1A1C;
+  width: 500px;
+}
+
+#show-item {
+  color: aliceblue;
+  font-size: 72px;
+}
+
+button {
+  color: aliceblue !important;
+  background-color: #a44a65 !important;
+}
+
+.number-section {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
