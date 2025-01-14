@@ -4,12 +4,21 @@
 
 .calculator-box {
   background-color: #1A1A1C;
-  width: 500px;
+  width: 300px;
+  @media screen and (min-width:768px) {
+    width:500px
+  }
 }
 
 #show-item {
   color: aliceblue;
   font-size: 72px;
+  border: 5px solid white;
+  margin:30px;
+  overflow: scroll;
+}
+#show-item::-webkit-scrollbar {
+  display: none;
 }
 
 button {
