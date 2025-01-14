@@ -21,7 +21,6 @@ function updateDisplay(value) {
 function performCalculation(value) {
   let num1 = Number(result);
   let num2 = Number(value);
-
   switch (currentOperator) {
     case "+":
       result = (num1 + num2).toString();
@@ -89,11 +88,10 @@ equals.addEventListener("click", () => {
 
 clear.addEventListener("click", () => {
   let num = number.innerHTML;
-  console.log(num)
-  if (num==="ERROR") {
+  if (num === "ERROR") {
     number.innerHTML = '0'
   }
- num = number.innerHTML;
+  num = number.innerHTML;
   if (num !== '0' && num.length > 1) {
     expression = expression.substring(0, expression.length - 1);
     number.innerHTML = expression;
@@ -108,22 +106,20 @@ clear.addEventListener("click", () => {
   }
   else if (num.length === 1) {
     number.innerHTML = '0'
-    expression="";
-    currentValue="";
-    currentOperator=""
+    expression = "";
+    currentValue = "";
+    currentOperator = ""
   }
-
 });
 
 toggle.addEventListener("click", () => {
-  if (expression !== "" ) {
+  if (expression !== "") {
     if (toggler === false && expression.indexOf("+") === -1 && expression.indexOf("-") === 0 && expression.indexOf("x") === -1 && expression.indexOf("/") === -1) {
       expression = expression.substring(1);
       currentValue = expression;
       number.innerHTML = expression
       toggler = true;
     }
-
     else if (expression.indexOf("+") === -1 && expression.indexOf("-") === -1 && expression.indexOf("x") === -1 && expression.indexOf("/") === -1) {
       if (toggler === true) {
         expression = "-" + expression;
@@ -132,7 +128,6 @@ toggle.addEventListener("click", () => {
         toggler = false;
       }
     }
-
   }
 })
 
